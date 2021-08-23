@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QhJ-oX-lg4">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="JQp-oL-0VI">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Top" translatesAutoresizingMaskIntoConstraints="NO" id="eko-55-aCu">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="384"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bottom" translatesAutoresizingMaskIntoConstraints="NO" id="J9O-An-IFC">
+                                <rect key="frame" x="0.0" y="461" width="390" height="383"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ih9-eO-Iny">
+                                <rect key="frame" x="160" y="387" width="70" height="70"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PokeballTop" translatesAutoresizingMaskIntoConstraints="NO" id="0PL-ef-86c">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="0PL-ef-86c" secondAttribute="height" multiplier="10:7" id="NXv-n2-b3f"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PokeballBottom" translatesAutoresizingMaskIntoConstraints="NO" id="lQF-0s-lDk">
+                                        <rect key="frame" x="0.0" y="35" width="70" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lQF-0s-lDk" secondAttribute="height" multiplier="2:1" id="YIP-sx-jA8"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLu-Og-cr0">
+                                        <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
+                                        <connections>
+                                            <action selector="pokeballPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fpj-RH-egy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0PL-ef-86c" firstAttribute="top" secondItem="Ih9-eO-Iny" secondAttribute="top" id="78z-W6-LCF"/>
+                                    <constraint firstItem="lQF-0s-lDk" firstAttribute="leading" secondItem="Ih9-eO-Iny" secondAttribute="leading" id="Cbg-8N-P6Y"/>
+                                    <constraint firstAttribute="width" secondItem="Ih9-eO-Iny" secondAttribute="height" multiplier="1:1" id="KL9-pc-3AF"/>
+                                    <constraint firstAttribute="trailing" secondItem="lQF-0s-lDk" secondAttribute="trailing" id="XQ0-eD-mKJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="FLu-Og-cr0" secondAttribute="trailing" id="fTi-q5-nBq"/>
+                                    <constraint firstAttribute="bottom" secondItem="lQF-0s-lDk" secondAttribute="bottom" id="iem-R6-IYp"/>
+                                    <constraint firstItem="FLu-Og-cr0" firstAttribute="leading" secondItem="Ih9-eO-Iny" secondAttribute="leading" id="mqt-qw-XoI"/>
+                                    <constraint firstItem="0PL-ef-86c" firstAttribute="leading" secondItem="Ih9-eO-Iny" secondAttribute="leading" id="oLf-fL-toQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="FLu-Og-cr0" secondAttribute="bottom" id="oSq-1O-V2e"/>
+                                    <constraint firstAttribute="trailing" secondItem="0PL-ef-86c" secondAttribute="trailing" id="psV-wt-ln6"/>
+                                    <constraint firstItem="FLu-Og-cr0" firstAttribute="top" secondItem="Ih9-eO-Iny" secondAttribute="top" id="rGy-j8-NpV"/>
+                                    <constraint firstAttribute="width" constant="70" id="zgJ-6n-9my"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eko-55-aCu" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.485782" constant="-26" id="39r-hq-Bvl"/>
+                            <constraint firstAttribute="trailing" secondItem="eko-55-aCu" secondAttribute="trailing" id="9h3-tq-LKb"/>
+                            <constraint firstItem="QhJ-oX-lg4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FBW-3n-p1h"/>
+                            <constraint firstItem="Ih9-eO-Iny" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OlW-CU-Wzu"/>
+                            <constraint firstItem="J9O-An-IFC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PVk-ch-1L9"/>
+                            <constraint firstItem="eko-55-aCu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="XyD-dG-lCK"/>
+                            <constraint firstItem="J9O-An-IFC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="a66-vA-A96"/>
+                            <constraint firstAttribute="bottom" secondItem="J9O-An-IFC" secondAttribute="bottom" id="aDW-Mv-qua"/>
+                            <constraint firstItem="eko-55-aCu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="abZ-SF-xN8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QhJ-oX-lg4" secondAttribute="trailing" id="eOn-ir-vgC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QhJ-oX-lg4" secondAttribute="bottom" id="gQK-W5-prY"/>
+                            <constraint firstItem="J9O-An-IFC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.484597" constant="-26" id="pS0-jZ-I4f"/>
+                            <constraint firstItem="Ih9-eO-Iny" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="svC-Gz-z7H"/>
+                            <constraint firstItem="QhJ-oX-lg4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uRF-ei-lzF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomImage" destination="J9O-An-IFC" id="E15-EY-c9q"/>
+                        <outlet property="pokeballBottom" destination="lQF-0s-lDk" id="g7j-OZ-0jN"/>
+                        <outlet property="pokeballButton" destination="FLu-Og-cr0" id="TRK-fH-zwu"/>
+                        <outlet property="pokeballTop" destination="0PL-ef-86c" id="AYl-13-qCD"/>
+                        <outlet property="pokemonCollectionView" destination="QhJ-oX-lg4" id="wik-Nr-js4"/>
+                        <outlet property="topImage" destination="eko-55-aCu" id="CCS-4h-xDI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36.92307692307692" y="88.151658767772503"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bottom" width="414" height="409"/>
+        <image name="PokeballBottom" width="70" height="35"/>
+        <image name="PokeballTop" width="70" height="49"/>
+        <image name="Top" width="414" height="410"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.65490196078431373" green="0.82745098039215681" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
